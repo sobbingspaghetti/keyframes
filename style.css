@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#box{
+    width: 170px;
+    height: 120px;
+    font-size: 16px;
+    color: black;
+    border: 2px solid black;
+}
+
+.bounce{
+    animation-name: bazinga-bounce;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite ; /*how often animation happens*/
+}
+
+@keyframes bazinga-bounce{
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+
+.rotate{
+    animation-name: rotate-yay;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate-yay {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.fade {
+    animation-name: taper-fade;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    -o-animation-iteration-count: infinite;
+}
+
+@keyframes taper-fade {
+    0%, 100%{
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+}
+
+
+.scale{
+    animation-name: meow;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes meow{
+    0%, 100%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.2);
+    }
+}
+
+
+.slide-in{
+    animation-name: slider;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes slider{
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
